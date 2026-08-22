@@ -4,6 +4,8 @@ Data and code archive for:
 
 Levinson, D. (2026). Testing Pedestrian Flow and Delay Estimation from First-Actuation Latency. *Findings*, August 20, 2026. https://doi.org/10.32866/001c.166369
 
+GitHub archive: https://github.com/dlevinson/testing-pedestrian-flow-delay-first-actuation-latency
+
 ## Status
 
 This repository contains the releasable data, code, manifests, checksums, and derived outputs used for the paper's first-actuation validation analyses. Raw SCATS controller histories are not included.
