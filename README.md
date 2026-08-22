@@ -65,3 +65,14 @@ Excluded:
 ## License
 
 Author-created code in this repository is licensed under MIT. Repository documentation and derived data are licensed under CC BY 4.0. Third-party or publisher material is not relicensed here; see `LICENSE_STATUS.md`.
+
+<!-- package-hardening-status:start -->
+## Package Hardening Status
+
+Generated: 2026-08-23 07:49:13 AEST
+
+- Pipeline: `NOTHING-TO-DO/DATA-CODE-ALREADY-UPLOADED`
+- Sidecars added/updated: `PACKAGE_STATUS.md`, `PACKAGE_MANIFEST.csv`, `LICENSE_STATUS.md`.
+- Public paper-package repositories include `paper/` PDF reference copies by owner decision; publisher takedown requests can be handled later if they arise.
+- Final GitHub upload completed; the manifest and license-status note document the public release boundary.
+<!-- package-hardening-status:end -->
