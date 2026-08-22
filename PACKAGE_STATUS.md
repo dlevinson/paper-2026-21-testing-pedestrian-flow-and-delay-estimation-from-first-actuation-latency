@@ -6,7 +6,7 @@ Generated: 2026-08-23 AEST
 
 - Row ID: `paper-2026-21`
 - Pipeline: `NOTHING-TO-DO/DATA-CODE-ALREADY-UPLOADED`
-- GitHub repository: https://github.com/dlevinson/testing-pedestrian-flow-delay-first-actuation-latency
+- GitHub repository: https://github.com/dlevinson/paper-2026-21-testing-pedestrian-flow-and-delay-estimation-from-first-actuation-latency
 - Upload action: `already_uploaded_public_github`
 - Final bucket: `public_archive_sufficient`
 - Rights status: `likely_clear_with_provenance`

@@ -4,7 +4,7 @@ Data and code archive for:
 
 Levinson, D. (2026). Testing Pedestrian Flow and Delay Estimation from First-Actuation Latency. *Findings*, August 20, 2026. https://doi.org/10.32866/001c.166369
 
-GitHub archive: https://github.com/dlevinson/testing-pedestrian-flow-delay-first-actuation-latency
+GitHub archive: https://github.com/dlevinson/paper-2026-21-testing-pedestrian-flow-and-delay-estimation-from-first-actuation-latency
 
 ## Status
 
