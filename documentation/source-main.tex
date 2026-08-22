@@ -1,0 +1,213 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{placeins}
+\usepackage{setspace}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\setstretch{1.08}
+\setlength{\emergencystretch}{2em}
+\setlist[enumerate]{leftmargin=*, itemsep=0.15em}
+
+\title{\textbf{Testing Pedestrian Flow and Delay Estimation from First-Actuation Latency}}
+\author{David M. Levinson\\
+\small School of Civil Engineering, The University of Sydney\\
+\small \texttt{david.levinson@sydney.edu.au}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Traffic signal controllers timestamp the first pedestrian actuation that requests service, , but often do not count the actuations. We test a theory-based estimator that treats the time from flashing-don't-walk onset to first actuation as a censored waiting-time observation from a Poisson arrival-event process. The inferred event count and delay are calibrated separately to observed people. Fourteen manually observed cases give mean adjustments of 2.202 for counts and 2.176 for delay assuming 100\% compliance. A separate 24-leg-session video dataset gives 2.203 and 2.233. Held-out count errors are 23.9\% and 22.4\%. Observed behaviour reduces delay from 16.606 to 15.996 pedestrian-hours in the manual data and from 12.934 to 8.522 hours in video.
+\end{abstract}
+
+\noindent\textbf{Keywords:} pedestrian counts, pedestrian actuation, Poisson arrivals, signal delay, noncompliance, traffic signals, SCATS
+
+\section{Questions}
+
+Traffic signal systems such as SCATS timestamp the first accepted pedestrian actuation for a movement. Once a call has been stored, later pedestrians arriving before service normally add no observable count. The controller record is therefore an incomplete record of pedestrian arrivals. It does, however, retain the interval from flashing-don't-walk onset to first actuation, which contains information about arrival frequency, and the subsequent interval to Walk, which determines potential delay.
+
+Most published push-button count studies fit empirical relationships between controller activity and observed pedestrian flows. Larger Utah and Oregon studies show that these relationships are nonlinear and context dependent \citep{singleton2021pedestrianSignalCounts,kothuri2024activeTransportationCounts,saheli2026pedestrianVolumes}. A closer timing-based study derived pedestrian flows from a Poisson arrival model and button and signal events at two midblock crossings \citep{liWu2021midblockVolume}, while high-resolution sensor research estimated pedestrian delay directly \citep{karimpour2022pedestrianDelay}. The method tested here is also theory based: it derives an arrival-event rate from first-actuation waiting time and censored exposure, then calibrates the remaining difference between arrival events and people. The open questions are its count and delay adjustments and the effect of observed compliance on delay.
+
+We ask:
+\begin{enumerate}
+  \item How accurately does the theory-based first-actuation estimator predict observed pedestrian arrivals after calibration?
+  \item How large and variable are the adjustments for pedestrian counts, delay assuming 100\% compliance, and delay under observed behavior?
+  \item Does an independently collected video sample produce similar count and delay adjustments under the same estimator?
+\end{enumerate}
+
+\section{Methods}
+
+\subsection{Data}
+
+The Manual Crossing-Actuation Validation (MCAV) data contain second-by-second signal indication, pedestrian arrival, and actuation observations collected around midday in August 2022. Fourteen crossing-direction cases at 11 Sydney intersections contain 1,744 pedestrians, 513 actuations, 492 restrictive cycles, and 14.07 hours of exposure.
+
+The peer dataset records 2,004 pedestrians at three Sydney intersections in six weekday hour-long video sessions \citep{choy2026pedestrianNonCompliance}. One record without a mapped crossing leg is excluded, leaving 2,003 pedestrians in 24 leg-session cases. Complete directional signal timelines identify every restrictive cycle, including cycles without pedestrians. The pedestrian table records arrival and crossing-start times and binary actuator use, but not a separate press timestamp.
+
+\subsection{Method}
+
+\begin{table}[htbp]
+\centering
+\caption{Nomenclature used in this article}
+\label{tab:nomenclature}
+\footnotesize
+\begin{tabular}{@{}p{0.25\textwidth}p{0.54\textwidth}p{0.14\textwidth}@{}}
+\toprule
+Symbol & Definition & Unit \\
+\midrule
+\(i,j\) & Restrictive-cycle and validation-case indices & -- \\
+\(Y_i,C_i,R_i\) & First-actuation latency, censored exposure, and actuation-to-Walk wait & s \\
+\(\mathcal A_j,\mathcal C_j\) & Actuated and right-censored cycles in case \(j\) & sets \\
+\(K_j,T_j\) & Actuated cycles and total observed exposure in case \(j\) & cycles; s \\
+\(\widehat\lambda_j\) & Estimated pedestrian arrival-event rate & events/s \\
+\(\widehat N_j,N_j\) & Event-equivalent estimate and observed person count & events; persons \\
+\(\widehat N^{\mathrm{all}}_j,E_j\) & Estimate under universal actuation and occupied one-second arrival events & events \\
+\(\alpha_{N,j}\) & Adjustment from predicted arrival events to observed people & -- \\
+\(\widehat D_j\) & Unexpanded first-actuation delay estimate & person-s \\
+\(D_{j,100},D_{j,\mathrm{obs}}\) & Delay assuming 100\% compliance and with observed behavior & person-s \\
+\(\alpha_{D,j,100}\) & Adjustment for delay assuming 100\% compliance & -- \\
+\(\alpha_{D,j,\mathrm{obs}}\) & Adjustment for observed-behavior delay & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The same estimator and calibration calculations are applied to both datasets. The method posits that the interval from flashing-don't-walk onset to first actuation is the waiting time to the first actuation-producing arrival event in a locally Poisson process. A cycle without an actuation is a right-censored waiting time. The resulting censored exponential likelihood supplies the event rate; extending it over total exposure gives the predicted arrival events. This is a theory-based base estimate rather than a direct empirical conversion from calls to people.
+
+Let \(j\) identify a validation case and \(i\) a restrictive signal cycle beginning at flashing-don't-walk onset. The set \(\mathcal A_j\) contains cycles with an actuation and \(\mathcal C_j\) contains cycles that end without one. For an actuated cycle, \(Y_i\) is the time from flashing-don't-walk onset to its first actuation. For a cycle without actuation, \(C_i\) is its full restrictive duration. The number of actuated cycles is \(K_j=|\mathcal A_j|\), and \(T_j\) is the case's total observed exposure. Assuming locally Poisson arrival events, the estimated rate and predicted number of arrival events are
+\begin{equation}
+\widehat\lambda_j=
+\frac{K_j}{\sum_{i\in\mathcal A_j}Y_i+\sum_{i\in\mathcal C_j}C_i},
+\qquad
+\widehat N_j=T_j\widehat\lambda_j .
+\label{eq:rate}
+\end{equation}
+The first actuation in each restrictive cycle supplies the timing observation; the fitted rate represents later arrival events. Calibration accounts for people arriving in groups and for arrivals that do not actuate.
+
+For each actuated cycle, let \(R_i\) be the time from first actuation to the next Walk. The first arrival contributes \(R_i\) seconds of delay, while later Poisson arrivals contribute the second term below. The model's unexpanded case delay is
+\begin{equation}
+\widehat D_i=R_i+\frac{\widehat\lambda_jR_i^2}{2},
+\qquad
+\widehat D_j=\sum_{i\in\mathcal A_j}\widehat D_i .
+\label{eq:delay}
+\end{equation}
+
+Let \(N_j\) be the observed number of pedestrians. For delay, \(D_{j,100}\) is the total wait to the next Walk when every observed restrictive-phase arrival complies, and \(D_{j,\mathrm{obs}}\) is total delay under observed behavior. The count and delay adjustment factors are
+\begin{equation}
+\alpha_{N,j}=\frac{N_j}{\widehat N_j},
+\qquad
+\alpha_{D,j,100}=\frac{D_{j,100}}{\widehat D_j},
+\qquad
+\alpha_{D,j,\mathrm{obs}}=\frac{D_{j,\mathrm{obs}}}{\widehat D_j}.
+\label{eq:alpha}
+\end{equation}
+An adjustment of one reproduces the observed target; a value above one expands the model estimate.
+
+We trace the pooled count adjustment through three observable steps. A universal-actuation replay replaces the first press with the first observed restrictive-phase arrival while retaining empty cycles; its estimate is \(\widehat N^{\mathrm{all}}_j\). The number of one-second intervals containing one or more pedestrian arrivals is \(E_j\). The ratio \(N_j/E_j\) is the mean number of people in an occupied arrival second and primarily represents group arrivals at the available temporal resolution. The resulting identity separates missing actuation, group arrivals, and remaining timing/model differences:
+\begin{equation}
+\alpha_N^{\mathrm{pool}}
+=\frac{\sum_j N_j}{\sum_j\widehat N_j}
+=\frac{\sum_j\widehat N^{\mathrm{all}}_j}{\sum_j\widehat N_j}
+\times\frac{\sum_jN_j}{\sum_jE_j}
+\times\frac{\sum_jE_j}{\sum_j\widehat N^{\mathrm{all}}_j}.
+\label{eq:decomposition}
+\end{equation}
+
+The equations and decomposition are unchanged between datasets; only the mapping from observations to inputs differs. MCAV supplies the first press time directly. In video, the first eligible actuator user's recorded arrival time is treated as the press time because a separate timestamp is unavailable. MCAV \(D_{j,\mathrm{obs}}\) applies each case's observed compliant share to \(D_{j,100}\), because behavior is recorded by class rather than by person-linked crossing-start time. Video \(D_{j,\mathrm{obs}}\) instead sums each restrictive-phase arrival's recorded wait to crossing start. Leave-one-case-out prediction is otherwise identical: each held-out estimate is multiplied by the mean count adjustment from all other cases, and accuracy is summarized by the predicted total and mean absolute percentage error.
+
+\clearpage
+\section{Findings}
+
+\begin{table}[htbp]
+\centering
+\caption{Calibration adjustments and delay targets. In Panel A, ``Mean'' averages the case-specific adjustments used for transfer and ``Pooled'' divides the observed total by the unexpanded model total. Panel C reports the multiplicative count-adjustment components.}
+\label{tab:results}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrrrr@{}}
+\multicolumn{8}{@{}l}{\textit{Panel A. Estimator-matched adjustment distributions}}\\
+\toprule
+Data & Adjustment & \(n\) & Mean & Median & IQR & Range & Pooled \\
+\midrule
+MCAV & Count \(\alpha_N\) & 14 & 2.202 & 2.240 & 1.822--2.565 & 1.351--2.928 & 2.165 \\
+MCAV & 100\% delay \(\alpha_{D,100}\) & 14 & 2.176 & 2.208 & 1.862--2.549 & 1.445--2.942 & 2.133 \\
+MCAV & Observed delay \(\alpha_{D,\mathrm{obs}}\) & 14 & 2.097 & 2.125 & 1.761--2.366 & 1.381--2.853 & 2.055 \\
+Video & Count \(\alpha_N\) & 24 & 2.203 & 2.284 & 1.727--2.504 & 1.422--3.213 & 2.137 \\
+Video & 100\% delay \(\alpha_{D,100}\) & 24 & 2.233 & 2.223 & 1.691--2.565 & 1.156--3.751 & 1.952 \\
+Video & Observed delay \(\alpha_{D,\mathrm{obs}}\) & 24 & 1.396 & 1.479 & 1.132--1.589 & 0.870--2.044 & 1.286 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.7em}
+\begin{tabular}{@{}llrrrr@{}}
+\multicolumn{6}{@{}l}{\textit{Panel B. Delay assuming 100\% compliance and with observed behavior}}\\
+\toprule
+Data & Delay target & Total (h) & s/person & Mean adjustment & Share of 100\% \\
+\midrule
+MCAV & Assuming 100\% compliance & 16.606 & 34.28 & 2.176 & 1.000 \\
+MCAV & Observed-compliance scenario & 15.996 & 33.02 & 2.097 & 0.963 \\
+Video & Assuming 100\% compliance & 12.934 & 23.25 & 2.233 & 1.000 \\
+Video & Recorded behavior & 8.522 & 15.32 & 1.396 & 0.659 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.7em}
+\begin{tabular}{@{}llrr@{}}
+\multicolumn{4}{@{}l}{\textit{Panel C. Pooled count-adjustment decomposition}}\\
+\toprule
+Term & Quantity & MCAV & Video \\
+\midrule
+\(A\) & Missing actuation & 1.440 & 1.690 \\
+\(B\) & Group arrivals (people per occupied s) & 1.195 & 1.178 \\
+\(C\) & Remaining timing/model differences & 1.257 & 1.074 \\
+\midrule
+\(A\times B\times C\) & Overall count adjustment & 2.165 & 2.137 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+MCAV contains 805.6 predicted arrival events for 1,744 pedestrians. Leave-one-case-out calibration predicts 1,776.7 pedestrians with 23.9\% mean absolute percentage error. Video contains 937.3 predicted arrival events for 2,003 mapped pedestrians; its corresponding prediction is 2,067.4 with 22.4\% error. Applying the MCAV mean adjustment directly to video predicts 2,064.4 pedestrians, 3.1\% above the observed total.
+
+Panel C applies Equation~\ref{eq:decomposition} identically to both datasets. Its three multipliers reproduce pooled count adjustments of 2.165 for MCAV and 2.137 for video. The group-arrival terms imply 1.195 and 1.178 people per occupied arrival second. At the observed rates, chance same-second coincidence explains only a small part of the excess above one (SI), so these terms primarily represent pedestrians arriving together. Video's larger missing-actuation term is offset by a smaller remaining timing/model term, so similar overall adjustments arise through different mechanisms. Collection method is confounded with site and signal regime: this contrast does not identify a method effect, and site composition may explain as much or more of the component differences. Counts include all arrivals. Observed noncompliance among 63 of 1,728 classified MCAV crossers reduces the delay scenario. In video, 666 restrictive-phase crossers avoid 5.029 hours relative to their next-Walk counterfactual.
+
+The multi-site Utah and Oregon studies fit context-dependent empirical count relationships. The present estimator instead begins with a Poisson waiting-time model for first-actuation latency and uses calibration only to convert its event-equivalent base into people. Its contribution is a theory-based timing estimator with empirical count and delay adjustment distributions, rather than a universal people-per-call factor.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.98\textwidth]{figures/paper1_alpha_distributions.pdf}
+\caption{Probability densities and case rugs for MCAV count, MCAV delay assuming 100\% compliance, and video count adjustments. The shaded band is the MCAV count interquartile range.}
+\label{fig:factors}
+\end{figure}
+\FloatBarrier
+
+The count means are nearly identical across observation methods, while local ranges remain wide. Video observed-behavior delay includes recorded post-Walk startup; delay assuming 100\% compliance ends at Walk onset. The 14 paired MCAV cases form the transfer distribution for subsequent controller-history applications, and the 24 video cases provide an independent peer test.
+
+\medskip
+\noindent\textbf{Acknowledgments.}
+Zhenyu Liu collected the manual field observations. Keng Io Choy collected the video observations and supplied upstream pedestrian and signal tables. Anthropic Claude and OpenAI Codex assisted with code review and manuscript editing; the author verified the analysis and text.
+
+\medskip
+\noindent\textbf{Data and Code Availability.}
+The public video archive is associated with \citet{choy2026pedestrianNonCompliance}. Reproducible scripts, input manifests, checksums, manual validation data, and derived case outputs are provided with the submission package.
+
+\medskip
+\noindent\textbf{Funding and Conflict of Interest.}
+The author reports no project-specific funding or conflict of interest.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

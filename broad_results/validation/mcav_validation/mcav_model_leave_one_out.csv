@@ -1,0 +1,57 @@
+model_key,model,left_out_case,implied_to_actual_ratio_leave_one_out
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Burwood Rd & Railway Pde,0.5985981025665853
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Belmore St & Burwood Rd,0.575819647903677
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Beamish St & Evaline St,0.5811919653390731
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Church St & Parkes St,0.5772303907486229
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Queens Rd & Park Rd,0.5717565227129416
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Campbell St & Marsden St,0.5810684594793595
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Argyle St & Marsden St,0.5675845270865328
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Argyle St & O'Connell St,0.5611800338171954
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Burrows Ave & Gleeson Ave (NE to SW),0.5857081353765119
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Burrows Ave & Gleeson Ave (SW to NE),0.5790559606778719
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Brown St & Liverpool Rd (SW to NE),0.5748217074068205
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Brown St & Liverpool Rd (NE to SW),0.5608911489937655
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Station Rd & Rawson St (SW to NE),0.578251244973482
+poisson_observed_first_push_implied_count_all_time,"First-actuation latency, observed first-actuation phases",Station Rd & Rawson St (NE to SW),0.5743383945495647
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Burwood Rd & Railway Pde,0.47837460607712334
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Belmore St & Burwood Rd,0.46853299739093457
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Beamish St & Evaline St,0.46894676148468606
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Church St & Parkes St,0.45899406189667646
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Queens Rd & Park Rd,0.4545715569158934
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Campbell St & Marsden St,0.4594378926931397
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Argyle St & Marsden St,0.46625265924946385
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Argyle St & O'Connell St,0.44358057082580044
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Burrows Ave & Gleeson Ave (NE to SW),0.4607444085152953
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Burrows Ave & Gleeson Ave (SW to NE),0.4693445561378296
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Brown St & Liverpool Rd (SW to NE),0.4529145280812177
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Brown St & Liverpool Rd (NE to SW),0.46691910994100816
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Station Rd & Rawson St (SW to NE),0.45465721779366947
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,Station Rd & Rawson St (NE to SW),0.46536653194649147
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Burwood Rd & Railway Pde,0.6222720445018378
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Belmore St & Burwood Rd,0.6115435284851488
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Beamish St & Evaline St,0.6129730722083844
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Church St & Parkes St,0.6072170334602726
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Queens Rd & Park Rd,0.6045568107690228
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Campbell St & Marsden St,0.6193313176287392
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Argyle St & Marsden St,0.6131476969654622
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Argyle St & O'Connell St,0.5922934683119261
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Burrows Ave & Gleeson Ave (NE to SW),0.6184987977654649
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Burrows Ave & Gleeson Ave (SW to NE),0.6206992401656691
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Brown St & Liverpool Rd (SW to NE),0.6088381781758224
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Brown St & Liverpool Rd (NE to SW),0.6155444125114106
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Station Rd & Rawson St (SW to NE),0.6107483241792547
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",Station Rd & Rawson St (NE to SW),0.6142342711080695
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Burwood Rd & Railway Pde,0.67692941364128
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Belmore St & Burwood Rd,0.6679771127204459
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Beamish St & Evaline St,0.6682282961523716
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Church St & Parkes St,0.6627001114064899
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Queens Rd & Park Rd,0.6592544919955725
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Campbell St & Marsden St,0.6742974150620026
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Argyle St & Marsden St,0.6669780970860015
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Argyle St & O'Connell St,0.6465450098558712
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Burrows Ave & Gleeson Ave (NE to SW),0.6730127674791793
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Burrows Ave & Gleeson Ave (SW to NE),0.6760330207007037
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Brown St & Liverpool Rd (SW to NE),0.6638400802865224
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Brown St & Liverpool Rd (NE to SW),0.6711244056678869
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Station Rd & Rawson St (SW to NE),0.6676462873396535
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",Station Rd & Rawson St (NE to SW),0.6707923406987814

@@ -1,0 +1,4 @@
+group_code,group_label,pedestrians,pedestrian_share,restrictive_arrivals,eligible_actuator_users,actuation_rate_among_restrictive_arrivals,nonactuation_factor_restrictive,combined_people_per_eligible_actuator_user
+0,Individual,1540,0.768463074,1255,646,0.514741036,1.942724458,2.383900929
+1,Pair,362,0.180638723,293,89,0.303754266,3.292134831,4.067415730
+2,Group of 3+,102,0.050898204,81,23,0.283950617,3.521739130,4.434782609

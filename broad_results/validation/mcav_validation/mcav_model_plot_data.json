@@ -1,0 +1,166 @@
+{
+  "cases": [
+    {
+      "case": "Burwood Rd & Railway Pde",
+      "actual": 226.0,
+      "poisson_censored_all_time": 79.46045370938076,
+      "nonwalk": 123.09014343926883,
+      "full_cycle": 136.48063267067548,
+      "pushbutton_share": 0.16371681415929204
+    },
+    {
+      "case": "Belmore St & Burwood Rd",
+      "actual": 150.0,
+      "poisson_censored_all_time": 58.7915078933043,
+      "nonwalk": 92.89872258773138,
+      "full_cycle": 99.30396490174783,
+      "pushbutton_share": 0.22
+    },
+    {
+      "case": "Beamish St & Evaline St",
+      "actual": 153.0,
+      "poisson_censored_all_time": 59.53880821231848,
+      "nonwalk": 92.45894910951915,
+      "full_cycle": 100.90826339971555,
+      "pushbutton_share": 0.26143790849673204
+    },
+    {
+      "case": "Church St & Parkes St",
+      "actual": 60.0,
+      "poisson_censored_all_time": 32.687105500450855,
+      "nonwalk": 45.14562264595973,
+      "full_cycle": 48.07249496960964,
+      "pushbutton_share": 0.36666666666666664
+    },
+    {
+      "case": "Queens Rd & Park Rd",
+      "actual": 45.0,
+      "poisson_censored_all_time": 33.31603053435115,
+      "nonwalk": 40.55708549648887,
+      "full_cycle": 43.98610067766086,
+      "pushbutton_share": 0.6
+    },
+    {
+      "case": "Campbell St & Marsden St",
+      "actual": 124.0,
+      "poisson_censored_all_time": 61.343719571567675,
+      "nonwalk": 64.38237243450114,
+      "full_cycle": 71.69767017769432,
+      "pushbutton_share": 0.33064516129032256
+    },
+    {
+      "case": "Argyle St & Marsden St",
+      "actual": 167.0,
+      "poisson_censored_all_time": 70.35266209804956,
+      "nonwalk": 100.76518887852477,
+      "full_cycle": 112.23502347351433,
+      "pushbutton_share": 0.2874251497005988
+    },
+    {
+      "case": "Argyle St & O'Connell St",
+      "actual": 140.0,
+      "poisson_censored_all_time": 94.12987012987014,
+      "nonwalk": 117.66038382072935,
+      "full_cycle": 127.00128676932124,
+      "pushbutton_share": 0.36428571428571427
+    },
+    {
+      "case": "Burrows Ave & Gleeson Ave (NE to SW)",
+      "actual": 151.0,
+      "poisson_censored_all_time": 71.66726296958855,
+      "nonwalk": 82.43052215267315,
+      "full_cycle": 91.95014398380623,
+      "pushbutton_share": 0.271523178807947
+    },
+    {
+      "case": "Burrows Ave & Gleeson Ave (SW to NE)",
+      "actual": 101.0,
+      "poisson_censored_all_time": 34.5,
+      "nonwalk": 47.89025540086427,
+      "full_cycle": 53.33722956688238,
+      "pushbutton_share": 0.24752475247524752
+    },
+    {
+      "case": "Brown St & Liverpool Rd (SW to NE)",
+      "actual": 111.0,
+      "poisson_censored_all_time": 66.02368137782562,
+      "nonwalk": 73.46636203194063,
+      "full_cycle": 80.0086314702476,
+      "pushbutton_share": 0.36936936936936937
+    },
+    {
+      "case": "Brown St & Liverpool Rd (NE to SW)",
+      "actual": 77.0,
+      "poisson_censored_all_time": 27.278949462793474,
+      "nonwalk": 41.586571336537276,
+      "full_cycle": 45.29509832977125,
+      "pushbutton_share": 0.2857142857142857
+    },
+    {
+      "case": "Station Rd & Rawson St (SW to NE)",
+      "actual": 133.0,
+      "poisson_censored_all_time": 73.18032786885246,
+      "nonwalk": 83.78355674027922,
+      "full_cycle": 88.48131367395702,
+      "pushbutton_share": 0.3157894736842105
+    },
+    {
+      "case": "Station Rd & Rawson St (NE to SW)",
+      "actual": 106.0,
+      "poisson_censored_all_time": 43.36272640610105,
+      "nonwalk": 61.583370918040785,
+      "full_cycle": 65.30162851353481,
+      "pushbutton_share": 0.2641509433962264
+    }
+  ],
+  "summary": [
+    {
+      "model_key": "poisson_observed_first_push_implied_count_all_time",
+      "model": "First-actuation latency, observed first-actuation phases",
+      "aggregate_implied_to_actual_ratio": 0.5761141533951445,
+      "aggregate_calibration_multiplier": 1.7357671116163695,
+      "leave_one_out_min_ratio": 0.5608911489937655,
+      "leave_one_out_max_ratio": 0.5985981025665853,
+      "bootstrap_ratio_p025": 0.5198975864138965,
+      "bootstrap_ratio_p975": 0.6446458044443488,
+      "bootstrap_multiplier_p025": 1.5512394451429774,
+      "bootstrap_multiplier_p975": 1.9234557461551445
+    },
+    {
+      "model_key": "poisson_censored_implied_count_all_time",
+      "model": "Pooled first-push Poisson with no-push cycles as right-censored exposure",
+      "aggregate_implied_to_actual_ratio": 0.4619455881504897,
+      "aggregate_calibration_multiplier": 2.1647571178322984,
+      "leave_one_out_min_ratio": 0.44358057082580044,
+      "leave_one_out_max_ratio": 0.47837460607712334,
+      "bootstrap_ratio_p025": 0.4110716584524552,
+      "bootstrap_ratio_p975": 0.5238768569160693,
+      "bootstrap_multiplier_p025": 1.9088455365002135,
+      "bootstrap_multiplier_p975": 2.4326658854679
+    },
+    {
+      "model_key": "cycle_plugin_predicted_nonwalk_only",
+      "model": "Cycle plug-in first-actuation model, non-walk exposure only",
+      "aggregate_implied_to_actual_ratio": 0.612212790707029,
+      "aggregate_calibration_multiplier": 1.6334189928392795,
+      "leave_one_out_min_ratio": 0.5922934683119261,
+      "leave_one_out_max_ratio": 0.6222720445018378,
+      "bootstrap_ratio_p025": 0.568717843344329,
+      "bootstrap_ratio_p975": 0.66946793078521,
+      "bootstrap_multiplier_p025": 1.4937235288135657,
+      "bootstrap_multiplier_p975": 1.7583411734007302
+    },
+    {
+      "model_key": "cycle_plugin_predicted_full_cycle",
+      "model": "Cycle plug-in first-actuation model, full observed cycle exposure",
+      "aggregate_implied_to_actual_ratio": 0.6674652996434282,
+      "aggregate_calibration_multiplier": 1.4982052258510186,
+      "leave_one_out_min_ratio": 0.6465450098558712,
+      "leave_one_out_max_ratio": 0.67692941364128,
+      "bootstrap_ratio_p025": 0.6214421604443753,
+      "bootstrap_ratio_p975": 0.7268900315872415,
+      "bootstrap_multiplier_p025": 1.3757239149591773,
+      "bootstrap_multiplier_p975": 1.609160214178145
+    }
+  ]
+}

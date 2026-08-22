@@ -1,0 +1,7 @@
+excluded_item,reason
+Raw SCATS controller histories,Article states raw SCATS controller histories cannot be redistributed under archive terms.
+Broader SCATS HST source dumps,Restricted/proprietary controller-history source material is outside the releasable boundary.
+Site 516 temporal-profile bundle,Unrelated material from a different SCATS paper workflow; moved out of this package during the 2026-08-23 ingestion cleanup.
+Vendored Python dependencies,Environment material rather than paper data/code; dependencies should be installed from package metadata.
+LaTeX build logs and temporary render outputs,Build artifacts are nonarchival and reproducible from source if needed.
+Review scratch folders and proof contact sheets,Editorial/review work products are not part of the public data/code package.

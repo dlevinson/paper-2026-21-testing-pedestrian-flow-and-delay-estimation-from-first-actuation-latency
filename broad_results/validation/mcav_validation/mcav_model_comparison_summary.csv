@@ -1,0 +1,8 @@
+model_key,model,actual_total_pedestrians,implied_total_pedestrians,implied_to_actual_ratio,calibration_multiplier_actual_over_implied,mean_absolute_relative_error_cases,median_absolute_relative_error_cases
+manual_actuator_count,"Diagnostic recorded actuator events, not a person-volume estimator",1744.0,513.0,0.294151376146789,3.3996101364522415,0.6806180462914543,0.7065868263473054
+workbook_first_push_predicted_total,"Workbook first-wait formula, 3600 divided by mean first-push wait",1744.0,1183.47751776,0.6785994941284403,1.4736232618097522,0.3845972775715753,0.40619132864864865
+poisson_observed_first_push_implied_count_all_time,"Pooled first-push Poisson, uncensored first-push cycles only",1744.0,1004.743083521132,0.5761141533951445,1.7357671116163695,0.4009934809474381,0.4497719709108838
+poisson_censored_implied_count_all_time,Pooled first-push Poisson with no-push cycles as right-censored exposure,1744.0,805.633105734454,0.4619455881504897,2.1647571178322984,0.5192320433738334,0.5787265742631763
+poisson_censored_implied_count_nonwalk_only,"Pooled first-push Poisson with censored exposure, non-walk time only",1744.0,745.1813010850026,0.4272828561267217,2.340370051503832,0.5534418650593398,0.6120519092756804
+cycle_plugin_predicted_nonwalk_only,"Cycle plug-in first-actuation model, non-walk exposure only",1744.0,1067.6991069930586,0.612212790707029,1.6334189928392795,0.3701477179142754,0.39661563545793554
+cycle_plugin_predicted_full_cycle,"Cycle plug-in first-actuation model, full observed cycle exposure",1744.0,1164.0594825781386,0.6674652996434282,1.4982052258510186,0.31507415871710115,0.3404688666685258

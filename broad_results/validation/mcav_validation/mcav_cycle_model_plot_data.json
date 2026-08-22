@@ -1,0 +1,222 @@
+{
+  "summary": {
+    "n_cases": 14,
+    "actual_total": 1744.0,
+    "nonwalk_total": 1067.6991069930586,
+    "full_cycle_total": 1164.0594825781386,
+    "nonwalk_ratio": 0.612212790707029,
+    "full_cycle_ratio": 0.6674652996434282,
+    "nonwalk_calibration_multiplier": 1.6334189928392795,
+    "full_cycle_calibration_multiplier": 1.4982052258510186,
+    "nonwalk_leave_one_out_min": 0.592293468311926,
+    "nonwalk_leave_one_out_max": 0.6222720445018378,
+    "full_cycle_leave_one_out_min": 0.6465450098558712,
+    "full_cycle_leave_one_out_max": 0.67692941364128,
+    "nonwalk_bootstrap_p025": 0.5683889194910996,
+    "nonwalk_bootstrap_p500": 0.6111020878658213,
+    "nonwalk_bootstrap_p975": 0.6692018578243415,
+    "full_cycle_bootstrap_p025": 0.6231085294055565,
+    "full_cycle_bootstrap_p500": 0.6661401114902925,
+    "full_cycle_bootstrap_p975": 0.7260909657885751
+  },
+  "cases": [
+    {
+      "case": "Burwood Rd & Railway Pde",
+      "actual": 226.0,
+      "nonwalk": 123.09014343926883,
+      "full": 136.48063267067548,
+      "nonwalk_ratio": 0.5446466523861453,
+      "full_ratio": 0.6038966047375021
+    },
+    {
+      "case": "Belmore St & Burwood Rd",
+      "actual": 150.0,
+      "nonwalk": 92.89872258773138,
+      "full": 99.30396490174783,
+      "nonwalk_ratio": 0.6193248172515425,
+      "full_ratio": 0.6620264326783188
+    },
+    {
+      "case": "Beamish St & Evaline St",
+      "actual": 153.0,
+      "nonwalk": 92.45894910951915,
+      "full": 100.90826339971554,
+      "nonwalk_ratio": 0.6043068569249618,
+      "full_ratio": 0.6595311333314741
+    },
+    {
+      "case": "Church St & Parkes St",
+      "actual": 60.0,
+      "nonwalk": 45.145622645959726,
+      "full": 48.07249496960964,
+      "nonwalk_ratio": 0.7524270440993288,
+      "full_ratio": 0.801208249493494
+    },
+    {
+      "case": "Queens Rd & Park Rd",
+      "actual": 45.0,
+      "nonwalk": 40.55708549648887,
+      "full": 43.986100677660865,
+      "nonwalk_ratio": 0.9012685665886415,
+      "full_ratio": 0.9774689039480192
+    },
+    {
+      "case": "Campbell St & Marsden St",
+      "actual": 124.0,
+      "nonwalk": 64.38237243450114,
+      "full": 71.69767017769433,
+      "nonwalk_ratio": 0.5192126809233962,
+      "full_ratio": 0.5782070175620511
+    },
+    {
+      "case": "Argyle St & Marsden St",
+      "actual": 167.0,
+      "nonwalk": 100.76518887852475,
+      "full": 112.23502347351435,
+      "nonwalk_ratio": 0.6033843645420643,
+      "full_ratio": 0.6720660088234391
+    },
+    {
+      "case": "Argyle St & O'Connell St",
+      "actual": 140.0,
+      "nonwalk": 117.66038382072936,
+      "full": 127.00128676932121,
+      "nonwalk_ratio": 0.8404313130052098,
+      "full_ratio": 0.9071520483522943
+    },
+    {
+      "case": "Burrows Ave & Gleeson Ave (NE to SW)",
+      "actual": 151.0,
+      "nonwalk": 82.43052215267313,
+      "full": 91.95014398380621,
+      "nonwalk_ratio": 0.5458974976998221,
+      "full_ratio": 0.6089413508861339
+    },
+    {
+      "case": "Burrows Ave & Gleeson Ave (SW to NE)",
+      "actual": 101.0,
+      "nonwalk": 47.89025540086428,
+      "full": 53.337229566882385,
+      "nonwalk_ratio": 0.47416094456301267,
+      "full_ratio": 0.5280913818503207
+    },
+    {
+      "case": "Brown St & Liverpool Rd (SW to NE)",
+      "actual": 111.0,
+      "nonwalk": 73.46636203194065,
+      "full": 80.00863147024761,
+      "nonwalk_ratio": 0.6618591174048707,
+      "full_ratio": 0.7207984817139425
+    },
+    {
+      "case": "Brown St & Liverpool Rd (NE to SW)",
+      "actual": 77.0,
+      "nonwalk": 41.58657133653727,
+      "full": 45.29509832977124,
+      "nonwalk_ratio": 0.5400853420329516,
+      "full_ratio": 0.5882480302567694
+    },
+    {
+      "case": "Station Rd & Rawson St (SW to NE)",
+      "actual": 133.0,
+      "nonwalk": 83.78355674027924,
+      "full": 88.48131367395702,
+      "nonwalk_ratio": 0.6299515544381897,
+      "full_ratio": 0.665273035142534
+    },
+    {
+      "case": "Station Rd & Rawson St (NE to SW)",
+      "actual": 106.0,
+      "nonwalk": 61.583370918040785,
+      "full": 65.30162851353481,
+      "nonwalk_ratio": 0.5809751973400074,
+      "full_ratio": 0.6160530991842906
+    }
+  ],
+  "loo": [
+    {
+      "case": "Burwood Rd & Railway Pde",
+      "actual_removed": 226.0,
+      "nonwalk_ratio_without_case": 0.6222720445018378,
+      "full_cycle_ratio_without_case": 0.67692941364128
+    },
+    {
+      "case": "Belmore St & Burwood Rd",
+      "actual_removed": 150.0,
+      "nonwalk_ratio_without_case": 0.6115435284851488,
+      "full_cycle_ratio_without_case": 0.6679771127204459
+    },
+    {
+      "case": "Beamish St & Evaline St",
+      "actual_removed": 153.0,
+      "nonwalk_ratio_without_case": 0.6129730722083844,
+      "full_cycle_ratio_without_case": 0.6682282961523716
+    },
+    {
+      "case": "Church St & Parkes St",
+      "actual_removed": 60.0,
+      "nonwalk_ratio_without_case": 0.6072170334602726,
+      "full_cycle_ratio_without_case": 0.6627001114064899
+    },
+    {
+      "case": "Queens Rd & Park Rd",
+      "actual_removed": 45.0,
+      "nonwalk_ratio_without_case": 0.6045568107690228,
+      "full_cycle_ratio_without_case": 0.6592544919955725
+    },
+    {
+      "case": "Campbell St & Marsden St",
+      "actual_removed": 124.0,
+      "nonwalk_ratio_without_case": 0.6193313176287392,
+      "full_cycle_ratio_without_case": 0.6742974150620026
+    },
+    {
+      "case": "Argyle St & Marsden St",
+      "actual_removed": 167.0,
+      "nonwalk_ratio_without_case": 0.6131476969654622,
+      "full_cycle_ratio_without_case": 0.6669780970860015
+    },
+    {
+      "case": "Argyle St & O'Connell St",
+      "actual_removed": 140.0,
+      "nonwalk_ratio_without_case": 0.592293468311926,
+      "full_cycle_ratio_without_case": 0.6465450098558712
+    },
+    {
+      "case": "Burrows Ave & Gleeson Ave (NE to SW)",
+      "actual_removed": 151.0,
+      "nonwalk_ratio_without_case": 0.6184987977654649,
+      "full_cycle_ratio_without_case": 0.6730127674791793
+    },
+    {
+      "case": "Burrows Ave & Gleeson Ave (SW to NE)",
+      "actual_removed": 101.0,
+      "nonwalk_ratio_without_case": 0.6206992401656691,
+      "full_cycle_ratio_without_case": 0.6760330207007037
+    },
+    {
+      "case": "Brown St & Liverpool Rd (SW to NE)",
+      "actual_removed": 111.0,
+      "nonwalk_ratio_without_case": 0.6088381781758224,
+      "full_cycle_ratio_without_case": 0.6638400802865224
+    },
+    {
+      "case": "Brown St & Liverpool Rd (NE to SW)",
+      "actual_removed": 77.0,
+      "nonwalk_ratio_without_case": 0.6155444125114106,
+      "full_cycle_ratio_without_case": 0.6711244056678869
+    },
+    {
+      "case": "Station Rd & Rawson St (SW to NE)",
+      "actual_removed": 133.0,
+      "nonwalk_ratio_without_case": 0.6107483241792547,
+      "full_cycle_ratio_without_case": 0.6676462873396535
+    },
+    {
+      "case": "Station Rd & Rawson St (NE to SW)",
+      "actual_removed": 106.0,
+      "nonwalk_ratio_without_case": 0.6142342711080695,
+      "full_cycle_ratio_without_case": 0.6707923406987814
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+metric,value
+leg_session_groups,20
+observed_realised_wait_hours,8.521666666666667
+full_compliance_signal_only_hours,8.04324957335091
+full_compliance_plus_startup_hours,10.531547073350913
+noncompliance_wait_avoided_hours,2.075758122160657
+analytic_press_model_delay_hours,3.7114402083333338
+analytic_fullarrival_model_delay_hours,7.367684467592593
+analytic_delay_alpha,2.167150518898653
+startup_lag_seconds,5.499000000000009

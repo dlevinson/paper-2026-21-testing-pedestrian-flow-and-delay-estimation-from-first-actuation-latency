@@ -1,0 +1,73 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+\definecolor{mcavblue}{RGB}{35,102,139}
+\definecolor{delaypurple}{RGB}{117,79,161}
+\definecolor{videogold}{RGB}{194,123,32}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=15.8cm,
+  height=8.5cm,
+  xmin=0.5,
+  xmax=3.8,
+  ymin=0,
+  ymax=0.76,
+  xlabel={Adjustment factor $\alpha$},
+  ylabel={Probability density},
+  xtick={0.5,1,1.5,2,2.5,3,3.5},
+  tick label style={font=\small},
+  label style={font=\small},
+  grid=major,
+  grid style={gray!18},
+  axis line style={gray!55},
+  tick style={gray!55},
+  scaled y ticks=false,
+  /pgf/number format/fixed,
+  legend style={
+    at={(0.5,-0.19)},
+    anchor=north,
+    legend columns=3,
+    draw=none,
+    font=\small
+  },
+]
+\addplot[draw=none, fill=mcavblue!14, forget plot] coordinates
+  {(1.821967788,0) (2.565161581,0) (2.565161581,0.76) (1.821967788,0.76)}
+  \closedcycle;
+\addplot[mcavblue, very thick]
+  table[col sep=comma, x=alpha, y=alpha_density]
+  {../../broad_results/network_20180918/pedestrian_vehicle_delay_densities_20180918.csv};
+\addlegendentry{MCAV count adjustment $\alpha_N$}
+\addplot[delaypurple, very thick, dotted]
+  table[col sep=comma, x=alpha, y=delay_alpha_density]
+  {../../broad_results/network_20180918/pedestrian_vehicle_delay_densities_20180918.csv};
+\addlegendentry{MCAV delay assuming 100\% compliance $\alpha_{D,100}$}
+\addplot[videogold, very thick, dashed]
+  table[col sep=comma, x=alpha, y=video_alpha_density]
+  {../../broad_results/network_20180918/pedestrian_vehicle_delay_densities_20180918.csv};
+\addlegendentry{Video count adjustment $\alpha_N$}
+\addplot[only marks, mark=|, mark size=4pt, mcavblue, forget plot] coordinates
+  {(1.350701127,0.019) (1.487306843,0.019) (1.681214947,0.019)
+   (1.817428315,0.019) (1.835586207,0.019) (2.021396825,0.019)
+   (2.106959213,0.019) (2.373755236,0.019) (2.444495741,0.019)
+   (2.551388889,0.019) (2.569752479,0.019) (2.822689345,0.019)
+   (2.844182099,0.019) (2.927536232,0.019)};
+\addplot[only marks, mark=|, mark size=4pt, videogold, forget plot] coordinates
+  {(2.429116685,0.050) (1.736217133,0.050) (2.185155108,0.050)
+   (2.607470011,0.050) (3.212545050,0.050) (2.533657008,0.050)
+   (2.975236982,0.050) (3.131432238,0.050) (2.493677721,0.050)
+   (2.816009018,0.050) (1.422209420,0.050) (2.346095209,0.050)
+   (2.283941277,0.050) (2.102926080,0.050) (2.309707185,0.050)
+   (2.283400692,0.050) (1.527516493,0.050) (1.698276134,0.050)
+   (1.485931536,0.050) (2.457663064,0.050) (1.802775554,0.050)
+   (1.558122689,0.050) (1.656658660,0.050) (1.810337159,0.050)};
+\addplot[only marks, mark=|, mark size=4pt, delaypurple, forget plot] coordinates
+  {(1.445225832,0.081) (1.516547079,0.081) (1.632434519,0.081)
+   (1.854252270,0.081) (1.886487699,0.081) (1.924754261,0.081)
+   (2.320757601,0.081) (2.095937829,0.081) (2.511476541,0.081)
+   (2.396428167,0.081) (2.561231117,0.081) (2.802680853,0.081)
+   (2.576820804,0.081) (2.941725121,0.081)};
+\end{axis}
+\end{tikzpicture}
+\end{document}
